@@ -1,0 +1,54 @@
+package t1;
+
+import java.util.Arrays;
+import java.util.Random;
+
+public class Lotto {
+    private Date date;
+    private int num[];
+    
+    Random rand = new Random();
+    
+    public Lotto() {
+      date = new Date();
+      num = new int[6];
+    }
+    
+    public void randgen() {
+       date.setYear(rand.nextInt(11)+2010);
+       date.setMonth(rand.nextInt(12)+1);
+       date.setDay(rand.nextInt(31)+1);
+       draw();
+    }
+    
+    boolean duplicate(int num[], int pos){
+        for(int i=0;i<pos;i++){
+          if(num[i]==num[pos]) return true;
+        }
+        return false;
+    }
+    
+    public void draw() {
+      int temp;
+        for(int j=0;j<6;j++){
+            do{
+               temp = rand.nextInt(49)+1;
+            }while(duplicate(num,j));
+            num[j] = temp;
+         }
+    }
+
+   @Override
+   public String toString() {
+      return String.format("%4d/%02d/%02d   %02d %02d %02d %02d %02d %02d", date.getYear(), date.getMonth(), date.getDay(), 
+            num[0], num[1], num[2], num[3], num[4], num[5]);
+   }
+}
+
+/*
+2018/12/11   41 11 45 13 08 13
+2010/06/29   07 21 15 02 07 36
+2019/01/28   03 32 07 48 35 27
+2015/03/25   09 20 23 24 08 19
+2014/08/17   46 39 47 12 03 34
+ */
