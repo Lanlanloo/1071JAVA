@@ -1,0 +1,19 @@
+package p2;
+
+public class HourlyEmployee extends Employee {
+	protected int pay;
+
+	public HourlyEmployee(String name, String id, int empid, String title, int salary, int pay) {
+		super(name, id, empid, title, salary, pay);
+		this.pay=pay;
+	}
+	@Override
+	public String toString() {
+		return "name: "+name +" \nID:" +id +"\nEmpID: "+empid+ "\nTitle:"+ title+ "\nHourly Employee working  " +salary+"hours with the rate of "+pay+" dollars per hour";
+	}
+
+	public int yearEarning() {
+
+		return salary * pay;
+	}
+}
