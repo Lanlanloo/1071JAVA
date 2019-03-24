@@ -1,7 +1,7 @@
 package t1;
 import java.util.Scanner;
 
-public class T1_ID {
+public class T1 {
   public static void main(String[] args) {
     final int MAX = 100;
     Lotto lotto[] = new Lotto[MAX];
