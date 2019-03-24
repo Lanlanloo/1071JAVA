@@ -1,0 +1,17 @@
+package t1;
+import java.util.Scanner;
+
+public class T1_ID {
+  public static void main(String[] args) {
+    final int MAX = 100;
+    Lotto lotto[] = new Lotto[MAX];
+    Scanner input = new Scanner(System.in);
+    System.out.print("Enter N: ");
+    int n = input.nextInt();    
+    for(int i=0;i<n;i++) {
+      lotto[i] = new Lotto();
+      lotto[i].randgen();
+      System.out.println(lotto[i]);
+    }
+  }
+}
