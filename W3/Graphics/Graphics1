@@ -1,0 +1,25 @@
+package Graphics1;
+
+import java.awt.Graphics;
+import java.awt.Color;
+import javax.swing.JPanel;
+
+public class Graphics1 extends JPanel {
+	public void paintComponent(Graphics g) {
+		super.paintComponent(g);
+		this.setBackground(Color.WHITE);
+		g.setColor(new Color(150, 0, 250));
+		g.drawRect(200, 200, 300, 300);
+		g.drawArc(50, 50, 300, 300, 0, 270);
+		g.drawArc(350, 50, 300, 300, 270, 270);
+		g.drawArc(50, 350, 300, 300, 90, 270);
+		g.drawArc(350, 350, 300, 300, 180, 270);
+		g.drawArc(200, 50, 300, 300, 180, 180);
+		g.drawArc(200, 350, 300, 300, 0, 180);
+		g.drawArc(50, 200, 300, 300, 270, 180);
+		g.drawArc(350, 200, 300, 300, 90, 180);
+		g.drawLine(200, 350, 500, 350);
+		g.drawLine(350, 200, 350, 500);
+		g.drawOval(275, 275, 150, 150);
+	}
+}
