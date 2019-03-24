@@ -1,0 +1,94 @@
+package p2;
+
+public abstract class Employee {
+	
+	
+	protected String name;
+	protected String id;
+	protected int empid;
+	protected String title ; 
+	protected int salary ;
+	protected int pay ;
+	
+	public Employee(String name, String id, int empid, String title, int salary) {
+		this.name=name;
+		this.id=id;
+		this.empid=empid;
+		this.title=title;
+		this.salary=salary;
+	}
+
+	public Employee(String name, String id, int empid, String title, int salary,int pay) {
+		this.name=name;
+		this.id=id;
+		this.empid=empid;
+		this.title=title;
+		this.salary=salary;
+		this.pay=pay;
+	}
+
+	public Employee() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getId() {
+		return id;
+	}
+
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+
+	public int getEmpid() {
+		return empid;
+	}
+
+
+	public void setEmpid(int empid) {
+		this.empid = empid;
+	}
+
+
+	public String getTitle() {
+		return title;
+	}
+
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+
+	public int getSalary() {
+		return salary;
+	}
+
+
+	public void setSalary(int salary) {
+		this.salary = salary;
+	}
+	
+	
+	
+
+
+	public abstract int yearEarning();
+	
+	
+	
+	
+
+}
